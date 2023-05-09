@@ -20,34 +20,51 @@ int main()
         }
         
     }
-    if(arr[0]==0)
-        {
-            low++;
-            printf("After the first if\n");
-        }
-    printf("%d\n",count);
-    
-    while(low < count)
+    printf("The original array\n");
+    for(i=0;i<n;i++)
     {
-        printf("Inside while\n");
-        for(i=low;i<n;i++)
-        {
-            if (arr[i] == 0)
-            {
-                arr[i] = arr[low];
-                arr[low] = 0;  
-                printf("Swap\n");     
-            }
-            else
-            {
-                printf("No swap\n");
-            }
-            
-            
-        }
-        low++;
+        printf("%d\t",arr[i]);
     }
+    // if(arr[0]==0)
+    //     {
+    //         low++;
+    //         printf("After the first if\n");
+    //     }
+    // printf("%d\n",count);
+    
+    // while(low < count)
+    // {
+    //     printf("Inside while\n");
+    //     for(i=low;i<n;i++)
+    //     {
+    //         if (arr[i] == 0)
+    //         {
+    //             arr[i] = arr[low];
+    //             arr[low] = 0;  
+    //             printf("Swap\n");     
+    //         }
+    //         else
+    //         {
+    //             printf("No swap\n");
+    //         }
+            
+            
+    //     }
+    //     low++;
+    // }
 
+    i=0;
+    while (i < n)
+    {
+        if(arr[i] == 0)
+        {
+            arr[i] = arr[low];
+            arr[low]=0;
+            low++;
+        }
+        i++;
+    }
+    printf("New array\n");
     for(i=0;i<n;i++)
     {
         printf("%d\t",arr[i]);
